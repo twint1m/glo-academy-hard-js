@@ -1,15 +1,7 @@
-function stringEditor (str) {
-  if (typeof str !== 'string') {
-    console.log('Переданный аргумент не является строкой!')
-  }
-  let trimmedStr = str.trim();
-  if (str.length > 30) {
-    let cuttedStr = trimmedStr.slice(0, 30);
-    console.log(cuttedStr + '...');
-  }
-  else {
-    console.log(trimmedStr);
-  }
-}
+let i = prompt('Скока?');
 
-stringEditor('  hghdkkfjfhdjkfk  ')
+const isNumber = function (num) {
+  !isNaN(parseFloat(num)) && isFinite(num) && num.trim().length>0 ? console.log(true) : console.log(false);
+};
+
+isNumber(i);
