@@ -1,7 +1,23 @@
-let i = prompt('Скока?');
+console.log('Задание 1, вывод в консоль элементов массива');
+// задание 1 вывод в консоль элементов массива
+let arr = ['2345', '9876', '3546', '2096', '4321', '1254', '4892'];
+for (let i = 0; i < arr.length; i++) {
+  if (arr[i][0]==='2' || arr[i][0]==='4') {
+    console.log(arr[i]); 
+  }
+}
 
-const isNumber = function (num) {
-  !isNaN(parseFloat(num)) && isFinite(num) && num.trim().length>0 ? console.log(true) : console.log(false);
-};
+console.log('          ');
+console.log('Задание 2, нахождение делителей у простых чисел');
+// задание 2, вывод простых чисел в консоль
+let c = 0;
+for (let a = 1; a < 100; a++) {
+  for (let b = 1; b <= a; b++) {
+    a % b === 0 ? c++ : null;
+  }
+  if (c === 2) {
+    console.log(a + ' Делители этого числа: 1 и ' + a);
+  }
+  c = 0;
+}
 
-isNumber(i);
