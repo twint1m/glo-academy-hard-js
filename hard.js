@@ -1,23 +1,18 @@
-console.log('Задание 1, вывод в консоль элементов массива');
-// задание 1 вывод в консоль элементов массива
-let arr = ['2345', '9876', '3546', '2096', '4321', '1254', '4892'];
-for (let i = 0; i < arr.length; i++) {
-  if (arr[i][0]==='2' || arr[i][0]==='4') {
-    console.log(arr[i]); 
-  }
-}
+const week = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 
-console.log('          ');
-console.log('Задание 2, нахождение делителей у простых чисел');
-// задание 2, вывод простых чисел в консоль
-let c = 0;
-for (let a = 1; a < 100; a++) {
-  for (let b = 1; b <= a; b++) {
-    a % b === 0 ? c++ : null;
+const today = new Date().getDay();
+
+const daysOfWeek = document.getElementById('daysOfWeek');
+
+for (let i = 0; i<week.length; i++){
+  const li = document.createElement('li');
+  li.textContent = week[i];
+  if (i === today){
+    li.style.fontWeight = 'bold';
   }
-  if (c === 2) {
-    console.log(a + ' Делители этого числа: 1 и ' + a);
+  if (week[i] === 'Saturday' || week[i] === 'Sunday'){
+    li.style.fontStyle = 'italic';
   }
-  c = 0;
+  daysOfWeek.appendChild(li);
 }
 
